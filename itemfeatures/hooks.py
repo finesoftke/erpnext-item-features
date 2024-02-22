@@ -29,6 +29,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
+doctype_js = {"Sales Order": "public/js/sales_order.js" }
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -110,9 +111,10 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Pricing Rule": "itemfeatures.itemfeatures.override.ext_pricing_rule.ExtPricingRule",
+    "Sales Order": "itemfeatures.itemfeatures.override.ext_sales_order.ExtSalesOrder",
+}
 
 # Document Events
 # ---------------
@@ -155,9 +157,10 @@ app_license = "MIT"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "itemfeatures.event.get_events"
-# }
+override_whitelisted_methods = {
+	"erpnext.accounts.doctype.pricing_rule.pricing_rule.apply_pricing_rule": "itemfeatures.itemfeatures.override.ext_pricing_rule.apply_pricing_rule",
+}
+
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

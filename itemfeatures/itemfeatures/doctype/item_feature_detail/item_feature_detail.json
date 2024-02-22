@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-04 04:58:46.638613",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feature_type",
+  "feature",
+  "additional_cost",
+  "mandatory"
+ ],
+ "fields": [
+  {
+   "fieldname": "feature",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Feature",
+   "options": "Item Feature"
+  },
+  {
+   "default": "0",
+   "fieldname": "additional_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Additional Cost",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "feature.type",
+   "fieldname": "feature_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Feature Type",
+   "options": "Item Feature Type",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "If mandatory, this feature will have to be selected when creating an order/invoice",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Mandatory",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-04 06:18:14.065082",
+ "modified_by": "Administrator",
+ "module": "Itemfeatures",
+ "name": "Item Feature Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
