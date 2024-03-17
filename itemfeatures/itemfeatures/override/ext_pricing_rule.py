@@ -7,7 +7,7 @@ import json
 import re
 
 
-from erpnext.accounts.doctype.pricing_rule.pricing_rule import PricingRule, apply_on_dict, other_fields, get_serial_no_for_item, set_transaction_type, update_args_for_pricing_rule, update_pricing_rule_uom, remove_pricing_rule_for_item, get_pricing_rule_details, apply_price_discount_rule
+from erpnext.accounts.doctype.pricing_rule.pricing_rule import PricingRule, apply_on_dict, other_fields, set_transaction_type, update_args_for_pricing_rule, update_pricing_rule_uom, remove_pricing_rule_for_item, get_pricing_rule_details, apply_price_discount_rule
 
 class ExtPricingRule(PricingRule):
         
@@ -109,13 +109,13 @@ def apply_pricing_rule(args, doc=None):
 
         out.append(data)
 
-        if (
-            serialized_items.get(item.get("item_code"))
-            and not item.get("serial_no")
-            and set_serial_nos_based_on_fifo
-            and not args.get("is_return")
-        ):
-            out[0].update(get_serial_no_for_item(args_copy))
+        # if (
+        #     serialized_items.get(item.get("item_code"))
+        #     and not item.get("serial_no")
+        #     and set_serial_nos_based_on_fifo
+        #     and not args.get("is_return")
+        # ):
+        #     out[0].update(get_serial_no_for_item(args_copy))
 
     return out
 
