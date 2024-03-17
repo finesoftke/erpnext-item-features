@@ -29,7 +29,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Sales Order": "public/js/sales_order.js" }
+doctype_js = {"Sales Order": "public/js/sales_order.js", "BOM": "public/js/bom.js", "Work Order": "public/js/work_order.js" }
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -114,6 +114,8 @@ doctype_js = {"Sales Order": "public/js/sales_order.js" }
 override_doctype_class = {
 	"Pricing Rule": "itemfeatures.itemfeatures.override.ext_pricing_rule.ExtPricingRule",
     "Sales Order": "itemfeatures.itemfeatures.override.ext_sales_order.ExtSalesOrder",
+    "Work Order": "itemfeatures.itemfeatures.override.ext_work_order.ExtWorkOrder",
+    "BOM": "itemfeatures.itemfeatures.override.ext_bom.ExtBOM"
 }
 
 # Document Events

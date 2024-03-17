@@ -10,7 +10,9 @@
  "field_order": [
   "identifier",
   "description",
-  "exclusive"
+  "column_break_cdpsi",
+  "exclusive",
+  "classification"
  ],
  "fields": [
   {
@@ -34,11 +36,21 @@
    "in_list_view": 1,
    "label": "Exclusive",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cdpsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "classification",
+   "fieldtype": "Select",
+   "label": "Classification",
+   "options": "Descriptive\nAdditive"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-04 06:11:32.605625",
+ "modified": "2024-02-26 05:53:56.891560",
  "modified_by": "Administrator",
  "module": "Itemfeatures",
  "name": "Item Feature Type",

@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-25 19:24:16.277305",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parent_doctype",
+  "parent_name",
+  "table_field",
+  "row_name",
+  "features"
+ ],
+ "fields": [
+  {
+   "fieldname": "parent_doctype",
+   "fieldtype": "Link",
+   "label": "Parent Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "parent_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Parent Doc Name",
+   "options": "parent_doctype"
+  },
+  {
+   "fieldname": "table_field",
+   "fieldtype": "Data",
+   "label": "Table field"
+  },
+  {
+   "fieldname": "row_name",
+   "fieldtype": "Data",
+   "label": "Row Name"
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Table MultiSelect",
+   "label": "Item Features",
+   "options": "Item Feature Multiselect"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-25 19:24:16.277305",
+ "modified_by": "Administrator",
+ "module": "Itemfeatures",
+ "name": "Item Feature Child Table Values",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

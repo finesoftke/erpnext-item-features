@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "identifier",
+  "company",
   "additional_cost",
   "column_break_2upxj",
   "type"
@@ -36,11 +37,18 @@
    "fieldtype": "Link",
    "label": "Type",
    "options": "Item Feature Type"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-03 12:46:13.799060",
+ "modified": "2024-02-29 05:56:59.123609",
  "modified_by": "Administrator",
  "module": "Itemfeatures",
  "name": "Item Feature",

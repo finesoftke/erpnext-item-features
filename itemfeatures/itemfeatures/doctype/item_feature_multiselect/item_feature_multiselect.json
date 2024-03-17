@@ -12,6 +12,7 @@
   {
    "fieldname": "item_feature",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Item Feature",
    "options": "Item Feature"
   }
@@ -19,7 +20,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-04 06:49:17.598918",
+ "modified": "2024-02-25 17:36:09.333364",
  "modified_by": "Administrator",
  "module": "Itemfeatures",
  "name": "Item Feature Multiselect",
