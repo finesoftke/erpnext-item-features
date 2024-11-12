@@ -12,7 +12,9 @@
   "company",
   "additional_cost",
   "column_break_2upxj",
-  "type"
+  "type",
+  "category",
+  "feature_image"
  ],
  "fields": [
   {
@@ -44,11 +46,21 @@
    "label": "Company",
    "options": "Company",
    "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Feature Category"
+  },
+  {
+   "fieldname": "feature_image",
+   "fieldtype": "Attach Image",
+   "label": "Feature Image"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-29 05:56:59.123609",
+ "modified": "2024-11-11 04:48:45.643878",
  "modified_by": "Administrator",
  "module": "Itemfeatures",
  "name": "Item Feature",

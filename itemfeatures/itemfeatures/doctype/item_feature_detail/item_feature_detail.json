@@ -8,8 +8,10 @@
  "field_order": [
   "feature_type",
   "feature",
+  "category",
   "additional_cost",
-  "mandatory"
+  "mandatory",
+  "feature_image"
  ],
  "fields": [
   {
@@ -44,12 +46,23 @@
    "in_list_view": 1,
    "label": "Mandatory",
    "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category"
+  },
+  {
+   "fieldname": "feature_image",
+   "fieldtype": "Attach Image",
+   "label": "Feature Image"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-04 06:18:14.065082",
+ "modified": "2024-11-11 04:27:49.491819",
  "modified_by": "Administrator",
  "module": "Itemfeatures",
  "name": "Item Feature Detail",
