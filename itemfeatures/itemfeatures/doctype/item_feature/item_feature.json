@@ -14,7 +14,9 @@
   "column_break_2upxj",
   "type",
   "category",
-  "feature_image"
+  "feature_image",
+  "features_tab",
+  "features"
  ],
  "fields": [
   {
@@ -56,11 +58,22 @@
    "fieldname": "feature_image",
    "fieldtype": "Attach Image",
    "label": "Feature Image"
+  },
+  {
+   "depends_on": "eval: doc.type == \"Composite\"",
+   "fieldname": "features_tab",
+   "fieldtype": "Tab Break",
+   "label": "Features"
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Table",
+   "options": "Composite Feature Detail"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-11 04:48:45.643878",
+ "modified": "2024-11-28 14:55:03.158521",
  "modified_by": "Administrator",
  "module": "Itemfeatures",
  "name": "Item Feature",

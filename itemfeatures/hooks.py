@@ -7,6 +7,21 @@ app_description = "Add item features to Item and update BOM"
 app_email = "macharianyota@gmail.com"
 app_license = "MIT"
 
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "fieldname",
+                "=",
+                "custom_feature",
+            ],
+            ["module", "=", "itemfeatures"],
+            ["is_system_generated", "=", 0],
+        ],
+    }
+]
+
 # Includes in <head>
 # ------------------
 
@@ -112,8 +127,6 @@ doctype_js = {"BOM": "public/js/bom.js", "Work Order": "public/js/work_order.js"
 # Override standard doctype classes
 
 override_doctype_class = {
-	# "Pricing Rule": "itemfeatures.itemfeatures.override.ext_pricing_rule.ExtPricingRule",
-    # "Sales Order": "itemfeatures.itemfeatures.override.ext_sales_order.ExtSalesOrder",
     "Work Order": "itemfeatures.itemfeatures.override.ext_work_order.ExtWorkOrder",
     "BOM": "itemfeatures.itemfeatures.override.ext_bom.ExtBOM"
 }
@@ -159,9 +172,6 @@ override_doctype_class = {
 # Overriding Methods
 # ------------------------------
 #
-override_whitelisted_methods = {
-	"erpnext.accounts.doctype.pricing_rule.pricing_rule.apply_pricing_rule": "itemfeatures.itemfeatures.override.ext_pricing_rule.apply_pricing_rule",
-}
 
 #
 # each overriding function accepts a `data` argument;
