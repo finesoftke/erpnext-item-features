@@ -7,6 +7,7 @@ app_description = "Add item features to Item and update BOM"
 app_email = "macharianyota@gmail.com"
 app_license = "MIT"
 
+
 fixtures = [
     {
         "doctype": "Custom Field",
@@ -25,9 +26,15 @@ fixtures = [
 # Includes in <head>
 # ------------------
 
+
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/itemfeatures/css/itemfeatures.css"
 # app_include_js = "/assets/itemfeatures/js/itemfeatures.js"
+
+app_include_js = [
+    "public/js/transaction.js"
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/itemfeatures/css/itemfeatures.css"
@@ -44,7 +51,12 @@ fixtures = [
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"BOM": "public/js/bom.js", "Work Order": "public/js/work_order.js" }
+doctype_js = {
+    "BOM": "public/js/bom.js", 
+    "Work Order": "public/js/work_order.js" 
+    "Stock Entry": "public/js/stock_entry.js" 
+    "Stock Reconciliation": "public/js/stock_reconciliation.js" 
+    }
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -65,7 +77,7 @@ doctype_js = {"BOM": "public/js/bom.js", "Work Order": "public/js/work_order.js"
 # ----------
 
 # automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
+# website_generators = ["Web Page"]     
 
 # Jinja
 # ----------
@@ -128,7 +140,20 @@ doctype_js = {"BOM": "public/js/bom.js", "Work Order": "public/js/work_order.js"
 
 override_doctype_class = {
     "Work Order": "itemfeatures.itemfeatures.override.ext_work_order.ExtWorkOrder",
-    "BOM": "itemfeatures.itemfeatures.override.ext_bom.ExtBOM"
+    "BOM": "itemfeatures.itemfeatures.override.ext_bom.ExtBOM",
+    "Purchase Order": "itemfeatures.itemfeatures.override.ext_purchase_order.CustomPurchaseOrder",
+    "Sales Order": "itemfeatures.itemfeatures.override.ext_sales_order.ExtSalesOrder",
+    "Item": "itemfeatures.itemfeatures.override.ext_item.ExtItem",
+    "Material Request": "itemfeatures.itemfeatures.override.ext_material_request.ExtMaterialRequest",
+    "Stock Entry": "itemfeatures.itemfeatures.override.ext_stock_entry.ExtStockEntry",
+    "Stock Reconciliation": "itemfeatures.itemfeatures.override.ext_stock_reconciliation.ExtStockReconciliation",
+}
+
+override_whitelisted_methods = {
+    "erpnext.stock.doctype.stock_reconciliation.stock_reconciliation.get_items": "itemfeatures.itemfeatures.override.ext_stock_reconciliation.get_items",
+    "erpnext.stock.doctype.stock_reconciliation.stock_reconciliation.get_stock_balance_for": "itemfeatures.itemfeatures.override.ext_stock_reconciliation.get_stock_balance_for",
+    "erpnext.stock.utils.get_stock_balance": "itemfeatures.itemfeatures.override.utils.get_stock_balance",
+    "erpnext.stock.utils.get_incoming_rate": "itemfeatures.itemfeatures.override.utils.get_incoming_rate",
 }
 
 # Document Events
